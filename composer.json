@@ -1,0 +1,14 @@
+{
+	"autoload": {
+        "psr-4": {
+            "Sock\\": "src"
+        }
+    },
+    "require": {
+        "cboden/Ratchet": "^0.4",
+        "textalk/websocket": "1.0.*",
+        "zircote/swagger-php": "^2.0",
+        "php": "7.0.26",
+        "ext-phalcon": "3.3.2"
+    }
+}

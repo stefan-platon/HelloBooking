@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+    <button onclick="myFunction()">Click me</button>
+</body>
+</html>
+
+<script type="text/javascript">
+    let conn = new WebSocket('ws://5.2.191.107:11111/socket');
+    conn.onopen = function(e) {
+        console.log("Connection established!");
+    };
+    conn.onmessage = function(e) {
+        console.log(e.data);
+    };
+    function myFunction() {
+        conn.send('hello');
+    }
+</script>
